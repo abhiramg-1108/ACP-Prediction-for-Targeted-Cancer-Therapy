@@ -90,7 +90,6 @@ Each variable-length peptide sequence of length $L$ ($4 \le L \le 50$) is mapped
 
 ```text
 ├── download_acp_dataset.py          # Downloads 100% of the official IIIT-Delhi AntiCP 2.0 benchmark files
-├── prepare_acp_data.py              # Validates and inspects raw FASTA/sequence partitions
 ├── run_acp_pipeline.py              # Full pipeline: Feature extraction (424 -> 508) + Baseline & Ensemble training
 ├── acp_main_dataset_clean.csv       # 1,720 clean sequences (Official Train + Independent Test)
 ├── acp_alternate_dataset_clean.csv  # 1,939 clean sequences (Official Train + Independent Test)
