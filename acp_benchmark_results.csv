@@ -1,0 +1,11 @@
+Dataset,Model,Accuracy (%),Sensitivity (%),Specificity (%),F1-Score,MCC,AUROC,Time (s)
+MAIN,1. Baseline: SVM-Polynomial (424 feats),72.30%,59.30%,85.38%,0.6823,0.4627,0.7982,0.785s
+MAIN,2. Baseline: SVM-RBF (424 feats),74.05%,72.67%,75.44%,0.7375,0.4813,0.8152,0.866s
+MAIN,3. Baseline: Random Forest (424 feats),74.93%,76.74%,73.10%,0.7543,0.4988,0.8305,0.340s
+MAIN,4. Mitigation A: Biophysical + PseAAC + Tuned SVM-RBF,71.43%,68.02%,74.85%,0.7048,0.4297,0.8113,0.820s
+MAIN,5. Mitigation B: Proposed Multi-View Hybrid Ensemble (508 feats),75.51%,73.84%,77.19%,0.7515,0.5106,0.8353,5.461s
+ALTERNATE,1. Baseline: SVM-Polynomial (424 feats),85.31%,72.68%,97.94%,0.8319,0.7298,0.9303,0.829s
+ALTERNATE,2. Baseline: SVM-RBF (424 feats),91.75%,86.08%,97.42%,0.9126,0.8405,0.9579,0.785s
+ALTERNATE,3. Baseline: Random Forest (424 feats),92.01%,89.18%,94.85%,0.9178,0.8416,0.9680,0.352s
+ALTERNATE,4. Mitigation A: Biophysical + PseAAC + Tuned SVM-RBF,92.53%,90.21%,94.85%,0.9235,0.8514,0.9656,0.569s
+ALTERNATE,5. Mitigation B: Proposed Multi-View Hybrid Ensemble (508 feats),93.30%,89.69%,96.91%,0.9305,0.8682,0.9743,5.763s
