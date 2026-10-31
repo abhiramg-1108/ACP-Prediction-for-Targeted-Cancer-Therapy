@@ -1,0 +1,3 @@
+Dataset,Model,Accuracy (%),Sensitivity (%),Specificity (%),F1-Score,MCC,AUROC,Time (s)
+MAIN,6. ACPred-BMF (Bi-LSTM+Attention),72.89%,68.60%,77.19%,0.7173,0.4596,0.8037,61.152s
+ALTERNATE,6. ACPred-BMF (Bi-LSTM+Attention),88.92%,84.02%,93.81%,0.8835,0.7821,0.9557,89.792s
