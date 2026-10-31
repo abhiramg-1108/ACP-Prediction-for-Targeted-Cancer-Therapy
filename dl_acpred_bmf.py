@@ -68,21 +68,16 @@ def extract_dl_features_for_df(df, max_length=50):
 
 def build_acpred_bmf_model(max_length=50, lstm_units=64):
     """
-    Builds the Bi-LSTM + Attention architecture from ACPred-BMF.
+    Builds the BMF-Basic architecture (Bi-LSTM without attention) 
+    which the authors chose as their final optimized model.
     """
     inputs = Input(shape=(max_length, 36))
     
-    # Bi-LSTM Layer
-    lstm_out = Bidirectional(LSTM(lstm_units, return_sequences=True))(inputs)
-    
-    # Self-Attention Layer (using Keras Attention)
-    attention_out = Attention()([lstm_out, lstm_out])
-    
-    # Pool sequences to flat vector (equivalent to weighted attention sum)
-    context_vector = GlobalAveragePooling1D()(attention_out)
+    # Bi-LSTM Layer (return_sequences=False since we just want the final hidden state)
+    lstm_out = Bidirectional(LSTM(lstm_units, return_sequences=False))(inputs)
     
     # Dense Layers
-    dense1 = Dense(50, activation='relu')(context_vector)
+    dense1 = Dense(50, activation='relu')(lstm_out)
     
     # Output Layer
     outputs = Dense(1, activation='sigmoid')(dense1)
