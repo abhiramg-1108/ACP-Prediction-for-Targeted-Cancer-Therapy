@@ -169,3 +169,14 @@ To address the "black-box" nature of deep neural networks, we replicated the **S
 ├── acpred_bmf_roc.png                  # Plot 2: Independent Test Set ROC Curves (Main & Alternate)
 ├── acpred_bmf_shap_explainability.png  # Plot 3: Paper Fig. 4 & 5 SHAP Beeswarm & Feature Importance Rank
 └── README.md                           # Complete project documentation
+# 1. Install dependencies
+pip install torch pandas numpy scikit-learn matplotlib seaborn shap
+
+# 2. (Optional) Download raw benchmark files from IIIT-Delhi server
+python download_acp_dataset.py
+
+# 3. Build clean train/test CSVs from raw_anticp2_data/
+python build_clean_datasets.py
+
+# 4. Run 5-Fold CV, Independent Testing, Hybrid Fusion, and generate all 3 plots
+python run_acpred_bmf.py
